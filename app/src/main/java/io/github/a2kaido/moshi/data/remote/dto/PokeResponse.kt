@@ -5,8 +5,7 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class PokeResponse(
     val name: String,
-    val types: List<TypeWrapper>,
-    val huga: String
+    val types: List<TypeWrapper>
 )
 
 @JsonClass(generateAdapter = true)

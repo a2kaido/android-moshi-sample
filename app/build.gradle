@@ -14,7 +14,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "io.github.a2kaido.moshi.ScreenshotTestRunner"
     }
     buildTypes {
         release {
@@ -25,6 +25,15 @@ android {
     compileOptions {
         targetCompatibility = JavaVersion.VERSION_1_8
         sourceCompatibility = JavaVersion.VERSION_1_8
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 }
 
@@ -45,4 +54,26 @@ dependencies {
     implementation 'com.google.dagger:dagger-android:2.25.3'
     kapt 'com.google.dagger:dagger-android-processor:2.25.3'
     kapt "com.google.dagger:dagger-compiler:2.25.3"
+
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation "androidx.test:core-ktx:1.2.0"
+    androidTestImplementation "androidx.test:rules:1.2.0"
+    androidTestImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation "androidx.test.ext:junit-ktx:1.1.1"
+    androidTestImplementation (name:'cloudtestingscreenshotter_lib', ext:'aar')
+    androidTestImplementation "com.facebook.testing.screenshot:layout-hierarchy-litho:0.11.0"
+
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.2.0'
 }
+
+repositories {
+    flatDir {
+        dirs '../aars'
+    }
+}
+
+apply plugin: 'com.facebook.testing.screenshot'
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "925020193592",
+    "firebase_url": "https://moshi-faf54.firebaseio.com",
+    "project_id": "moshi-faf54",
+    "storage_bucket": "moshi-faf54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:925020193592:android:ee132100689b5236dd37cd",
+        "android_client_info": {
+          "package_name": "io.github.a2kaido.moshi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "925020193592-g1ijckpujoelm81k9qgffo097qs6nbfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpx2IEGsOyAWA3livzj2mvOrjb8D3hvNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "925020193592-g1ijckpujoelm81k9qgffo097qs6nbfg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
